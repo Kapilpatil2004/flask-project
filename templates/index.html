@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+
+<body>
+    <p> hi , welcome to my registration form</p>
+    <p> today is a {{day_of_week}}</p>
+    <p> The time is a {{current_time}}</p>
+    <div class="centred">
+        <form action="/submit" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter the name">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Enter the password">
+            <br>
+            <button type="submit">submit</button>
+        </form>
+        <a href="/get-data"><button>View data</button></a>
+
+    </div>
+
+</body>
+<style>
+    body {
+        background-color: whitesmoke;
+        font-family: Arial, sans-serif;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 24px;
+        color: black;
+    }
+
+    .centred {
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
+    }
+</style>
+
+</html>

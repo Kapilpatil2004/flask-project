@@ -56,7 +56,22 @@ def view():
         'data': data
     }
     return data
+@app.route('/submittodoitem', methods=['POST'])
+def submit_todo_item():
 
+    item_name = request.form.get('itemName')
+    item_description = request.form.get('itemDescription')
+
+    todo = {
+        "itemName": item_name,
+        "itemDescription": item_description
+    }
+
+    collection.insert_one(todo)
+
+    return jsonify({
+        "message": "To-Do item added successfully"
+    })
 
 @app.route('/get-data')
 def get_data():

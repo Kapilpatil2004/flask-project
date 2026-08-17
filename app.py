@@ -67,6 +67,9 @@ def get_data():
         "count": len(data),
         "data": data
     })
+@app.route('/todo')
+def todo():
+    return render_template('todo.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
